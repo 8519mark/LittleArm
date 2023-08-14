@@ -1,4 +1,4 @@
 all: main
 
-main: main.cpp screen.cpp controller.cpp state.cpp command.cpp
-	g++ -o main main.cpp screen.cpp controller.cpp state.cpp command.cpp -lncurses
+main: main.cpp Visual/screen.cpp controller.cpp StateManagement/state.cpp StateManagement/command.cpp
+	g++ -o main main.cpp Visual/screen.cpp controller.cpp StateManagement/state.cpp StateManagement/command.cpp -lncurses

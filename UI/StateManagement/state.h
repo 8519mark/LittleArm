@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 
-#include "controller.h"
+#include "../controller.h"
 #include "command.h"
 
 
@@ -25,6 +25,12 @@ class State {
 class InitState : public State {
   public:
     InitState(Controller *controller);
+    void stateMessage() override;
+};
+
+class InfoState : public State {
+  public:
+    InfoState(Controller *controller);
     void stateMessage() override;
 };
 

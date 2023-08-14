@@ -6,16 +6,23 @@
 class Screen {
   private:
     WINDOW *screen_ptr;
-    int ScreenWidth;
-    int ScreenHeight;
+    int screenWidth;
+    int screenHeight;
+    int rightStart;
   public:
+    
     Screen();
     Screen(int height, int width, int yStart, int xStart);
+    ~Screen();
 
     void clear();
     void refresh();
-    void addChar(char c, int x, int y);
+    void addChar(int charInInt, int x, int y);
     char getChar() const;
+
+    int getScreenWidth() const;
+    int getScreenHeight() const;
+    int getRightStart() const;
 };
 
 #endif
